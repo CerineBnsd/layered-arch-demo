@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.net.URL?>
+<BorderPane fx:id="rootPane" fx:controller="Presentation.Controller" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <BorderPane styleClass="header-section">
+         <left>
+            <Label id="header-text" text="Gestion de la vidéothèque"></Label>
+         </left>
+      </BorderPane>
+   </top>
+   <left>
+      <VBox styleClass="sidebar-section">
+         <children>
+            <Button fx:id="addCustomer" text="Ajout d'un client"></Button>
+            <Button fx:id="addFilm" text="Ajout d'un film"></Button>
+            <Button fx:id="addGame" text="Ajout d'un jeu"></Button>
+            <Button fx:id="rentItem" text="Location d'un article"></Button>
+            <Button fx:id="returnItem" text="Remise d'un article"></Button>
+            <Button fx:id="addPenalty" text="Ajout de pénalités"></Button>
+            <Button fx:id="searchByActor" text="Recherche par acteur"></Button>
+            <Button fx:id="searchAvailableItem" text="Disponibilité un article"></Button>
+            <Button fx:id="searchCustomerAllocations" text="Locations d'un clients"></Button>
+            <Button fx:id="searchCustomerLateAllocations" text="Articles en retard"></Button>
+            <Button fx:id="getAllCustomers" text="Affichage des clients"></Button>
+            <Button fx:id="getAllFilms" text="Affichage des films"></Button>
+            <Button fx:id="getAllGames" text="Afficheage de jeux"></Button>
+            <Button fx:id="getAllRentedItems" text="Affichage des article loués"></Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox styleClass="content-section">
+         <children>
+            <Label id="content-header" fx:id="queryTitle" text="Ajouter un client"></Label>
+            <HBox>
+               <Label fx:id="label1" text="Nom du client"></Label>
+               <TextField fx:id="input1" ></TextField>
+            </HBox>
+            <HBox>
+               <Label fx:id="label2" text="Nom du client"></Label>
+               <TextField fx:id="input2" ></TextField>
+            </HBox>
+            <HBox>
+               <Label fx:id="label3" text="Nom du client"></Label>
+               <TextField fx:id="input3" ></TextField>
+            </HBox>
+            <Button fx:id="confirm" text="Confirmer"></Button>
+            <Separator></Separator>
+            <Label id="content-header"  text="Les résultats"></Label>
+            <Label fx:id="results"></Label>
+            <ListView fx:id="resultsList"></ListView>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox id="footer-section">
+         <children>
+            <Label text="Esi Alog 2021 - Bensadi et Saiem"></Label>
+         </children>
+      </HBox>
+   </bottom>
+   <stylesheets>
+      <URL value="@gui.css"/>
+   </stylesheets>
+</BorderPane>
